@@ -6,7 +6,7 @@ class CurrencyConverter:
     def __init__(self, root):
         self.root = root
         self.root.title("Currency Converter")
-        self.api_key = '5cfe68986bc7ee09ecf76098'  # Replace with your API key
+        self.api_key = '5cfe68986bc7ee09ecf76098'
         self.api_url = f'https://v6.exchangerate-api.com/v6/{self.api_key}/latest/USD'
         
         self.create_widgets()
@@ -30,14 +30,14 @@ class CurrencyConverter:
         
         self.from_currency_combobox = ttk.Combobox(self.root, font=font_large)
         self.from_currency_combobox.grid(row=2, column=1, padx=10, pady=10)
-        self.from_currency_combobox['state'] = 'normal'  # Make it typable
+        self.from_currency_combobox['state'] = 'normal'  
         
         self.to_currency_label = tk.Label(self.root, text="To currency:", font=font_large)
         self.to_currency_label.grid(row=3, column=0, padx=10, pady=10)
         
         self.to_currency_combobox = ttk.Combobox(self.root, font=font_large)
         self.to_currency_combobox.grid(row=3, column=1, padx=10, pady=10)
-        self.to_currency_combobox['state'] = 'normal'  # Make it typable
+        self.to_currency_combobox['state'] = 'normal'  
         
         self.convert_button = tk.Button(self.root, text="Convert", command=self.convert_currency, font=font_large)
         self.convert_button.grid(row=4, column=0, columnspan=2, padx=10, pady=10)
